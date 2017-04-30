@@ -1,5 +1,6 @@
 package com.zou50.bouncycow.states;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.zou50.bouncycow.BCGame;
@@ -20,7 +21,10 @@ public class MenuState extends State {
 
     @Override
     protected void handleInput() {
-
+        if (Gdx.input.justTouched()) {
+            gsm.set(new PlayState(gsm));
+        }
+        dispose();
     }
 
     @Override
