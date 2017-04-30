@@ -3,17 +3,18 @@ package com.zou50.bouncycow.states;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.zou50.bouncycow.BCGame;
+import com.zou50.bouncycow.sprites.Cow;
 
 /**
  * Created by Danny on 4/30/17.
  */
 public class PlayState extends State {
 
-    private Texture cow;
+    private Cow cow;
 
     public PlayState(GameStateManager gsm) {
         super(gsm);
-        cow = new Texture("android/assets/cow.png");
+        cow = new Cow(50, 300);
         cam.setToOrtho(false, BCGame.WIDTH / 2, BCGame.HEIGHT / 2);
     }
 
@@ -24,14 +25,15 @@ public class PlayState extends State {
 
     @Override
     public void update(float dt) {
-
+        handleInput();
+        cow.update(dt);
     }
 
     @Override
     public void render(SpriteBatch sb) {
         sb.setProjectionMatrix(cam.combined);
         sb.begin();
-        sb.draw(cow, 50, 50);
+        sb.draw(cow.getTexture(), cow.getPosition().x, cow.getPosition().y);
         sb.end();
     }
 
