@@ -17,6 +17,7 @@ public class PlayState extends State {
     private static final int TUBE_SPACING = 125;
     private static final int TUBE_COUNT = 4;
     private static final int GROUND_Y_OFFSET = -50;
+    private static final int TUBE_X_OFFSET = 250;
 
     private Cow cow;
     private Texture bg;
@@ -36,7 +37,7 @@ public class PlayState extends State {
 
         tubes = new Array<Tube>();
         for (int i = 1; i <= TUBE_COUNT; i++)
-            tubes.add(new Tube(i * (TUBE_SPACING + Tube.TUBE_WIDTH)));
+            tubes.add(new Tube(i * (TUBE_SPACING + Tube.TUBE_WIDTH) + TUBE_X_OFFSET));
 
     }
 

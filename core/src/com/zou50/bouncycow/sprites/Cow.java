@@ -1,5 +1,7 @@
 package com.zou50.bouncycow.sprites;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
@@ -17,6 +19,7 @@ public class Cow {
     private Texture texture;
     private Animation cowAnimation;
     private Rectangle bounds;
+    private Sound boing;
 
     public Cow(int x, int y) {
         position = new Vector3(x, y, 0);
@@ -24,6 +27,7 @@ public class Cow {
         texture = new Texture("android/assets/cowframes.png");
         cowAnimation = new Animation(new TextureRegion(texture), 4, 0.5f);
         bounds = new Rectangle(x, y, texture.getWidth() / 4, texture.getHeight());
+        boing = Gdx.audio.newSound(Gdx.files.internal("android/assets/boing.ogg"));
     }
 
     public void update(float dt) {
@@ -49,6 +53,7 @@ public class Cow {
 
     public void jump() {
         velocity.y = 250;
+        boing.play(0.5f);
     }
 
     public Rectangle getBounds() {
@@ -57,6 +62,7 @@ public class Cow {
 
     public void dispose() {
         texture.dispose();
+        boing.dispose();
     }
 
 }
