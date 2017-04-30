@@ -2,6 +2,7 @@ package com.zou50.bouncycow.states;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 import com.zou50.bouncycow.BCGame;
@@ -20,6 +21,7 @@ public class MenuState extends State {
 
     private Rectangle playBounds;
     private boolean buttonHover;
+    private BitmapFont f;
 
     public MenuState(GameStateManager gsm) {
         super(gsm);
@@ -33,6 +35,7 @@ public class MenuState extends State {
                 playButton.getWidth(),
                 playButton.getHeight()
         );
+        f = new BitmapFont();
         cam.setToOrtho(false, BCGame.WIDTH, BCGame.HEIGHT);
     }
 
@@ -68,6 +71,7 @@ public class MenuState extends State {
                     25f
             );
         sb.draw(cow.getTexture(), (BCGame.WIDTH / 2) - (cow.getTexture().getRegionWidth() / 2), BCGame.HEIGHT / 2 + playButton.getHeight());
+        f.draw(sb, "Build 1.0 | Danny Zou", BCGame.WIDTH - 145, 20);
         sb.end();
     }
 
