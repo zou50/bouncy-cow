@@ -52,4 +52,8 @@ public class Cow {
         return bounds;
     }
 
+    public void dispose() {
+        cow.dispose();
+    }
+
 }
