@@ -1,6 +1,7 @@
 package com.zou50.bouncycow.states;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
@@ -38,13 +39,14 @@ public class PlayState extends State {
         tubes = new Array<Tube>();
         for (int i = 1; i <= TUBE_COUNT; i++)
             tubes.add(new Tube(i * (TUBE_SPACING + Tube.TUBE_WIDTH) + TUBE_X_OFFSET));
-
     }
 
     @Override
     protected void handleInput() {
-        if (Gdx.input.justTouched())
+        if (Gdx.input.justTouched() || Gdx.input.isKeyJustPressed(Input.Keys.SPACE))
             cow.jump();
+        if (Gdx.input.isKeyJustPressed(Input.Keys.M))
+            gsm.set(new MenuState(gsm));
     }
 
     @Override
@@ -90,6 +92,7 @@ public class PlayState extends State {
         cow.dispose();
         for (Tube tube: tubes)
             tube.dispose();
+        ground.dispose();
     }
 
     private void updateGround() {
