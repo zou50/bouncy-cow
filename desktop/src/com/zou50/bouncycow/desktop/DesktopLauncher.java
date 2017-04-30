@@ -7,6 +7,9 @@ import com.zou50.bouncycow.BCGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.title = BCGame.TITLE;
+		config.width = BCGame.WIDTH;
+		config.height = BCGame.HEIGHT;
 		new LwjglApplication(new BCGame(), config);
 	}
 }
