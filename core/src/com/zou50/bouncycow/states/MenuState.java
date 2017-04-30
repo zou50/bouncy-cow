@@ -35,4 +35,11 @@ public class MenuState extends State {
         sb.draw(playButton, (BCGame.WIDTH / 2) - (playButton.getWidth() / 2), BCGame.HEIGHT / 2);
         sb.end();
     }
+
+    @Override
+    public void dispose() {
+        background.dispose();
+        playButton.dispose();
+    }
+
 }
