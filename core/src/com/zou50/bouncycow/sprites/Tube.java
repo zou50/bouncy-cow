@@ -21,8 +21,8 @@ public class Tube {
     private Random rand;
 
     public Tube(float x) {
-        topTube = new Texture("android/assets/toptube.png");
-        botTube = new Texture("android/assets/bottomtube.png");
+        topTube = new Texture("toptube.png");
+        botTube = new Texture("bottomtube.png");
         rand = new Random();
 
         posTopTube = new Vector2(x, rand.nextInt(FLUCTUATION) + TUBE_GAP + LOWEST_OPENING);

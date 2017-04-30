@@ -24,7 +24,7 @@ public class BCGame extends ApplicationAdapter {
 	public void create () {
 		gsm = new GameStateManager();
 		batch = new SpriteBatch();
-		music = Gdx.audio.newMusic(Gdx.files.internal("android/assets/music.mp3"));
+		music = Gdx.audio.newMusic(Gdx.files.internal("music.mp3"));
 		music.setLooping(true);
 		music.setVolume(0.6f);
 		music.play();

@@ -24,10 +24,10 @@ public class Cow {
     public Cow(int x, int y) {
         position = new Vector3(x, y, 0);
         velocity = new Vector3(0, 0, 0);
-        texture = new Texture("android/assets/cowframes.png");
+        texture = new Texture("cowframes.png");
         cowAnimation = new Animation(new TextureRegion(texture), 4, 0.5f);
         bounds = new Rectangle(x, y, texture.getWidth() / 4, texture.getHeight());
-        boing = Gdx.audio.newSound(Gdx.files.internal("android/assets/boing.ogg"));
+        boing = Gdx.audio.newSound(Gdx.files.internal("boing.ogg"));
     }
 
     public void update(float dt) {

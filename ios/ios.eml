@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/../out/test/ios"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<excludeFolder url="file://$MODULE_DIR$/.gradle"/>
+		<excludeFolder url="file://$MODULE_DIR$/build"/>
+	</contentEntry>
+	<lib name="robovm-rt-2.3.0.jar" scope="COMPILE">
+		<srcroot url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mobidevelop.robovm/robovm-rt/2.3.0/e4027559952944c21a4c84b8d2ce227807cbd084/robovm-rt-2.3.0-sources.jar!/"/>
+	</lib>
+	<lib name="robovm-cocoatouch-2.3.0.jar" scope="COMPILE">
+		<srcroot url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mobidevelop.robovm/robovm-cocoatouch/2.3.0/de1fcc47b48adf07c035c78fb80f242c3501717e/robovm-cocoatouch-2.3.0-sources.jar!/"/>
+	</lib>
+	<lib name="gdx-backend-robovm-1.9.6.jar" scope="COMPILE">
+		<srcroot url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-robovm/1.9.6/7467c159f55ce3374abe24e42faaa539b1aa66e3/gdx-backend-robovm-1.9.6-sources.jar!/"/>
+	</lib>
+	<lib name="gdx-1.9.6.jar" scope="COMPILE">
+		<srcroot url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.6/7d903ecd6b0df2ec334814b8e70618e4c93fd37c/gdx-1.9.6-sources.jar!/"/>
+	</lib>
+	<lib name="gdx-box2d-1.9.6.jar" scope="COMPILE">
+		<srcroot url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-box2d/1.9.6/584f96799f8fedc8e6bb87eef1e261f0e7f92900/gdx-box2d-1.9.6-sources.jar!/"/>
+	</lib>
+	<lib name="robovm-objc-2.3.0.jar" scope="COMPILE">
+		<srcroot url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mobidevelop.robovm/robovm-objc/2.3.0/e0c1ac65f0d8f504b7a0c09efcbb8e14fb9f3e92/robovm-objc-2.3.0-sources.jar!/"/>
+	</lib>
+</component>

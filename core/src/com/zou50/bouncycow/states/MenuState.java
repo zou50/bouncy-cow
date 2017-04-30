@@ -24,9 +24,9 @@ public class MenuState extends State {
     public MenuState(GameStateManager gsm) {
         super(gsm);
         cow = new Cow(0, 0);
-        background = new Texture("android/assets/bg.png");
-        playButton = new Texture("android/assets/playbtn.png");
-        title = new Texture("android/assets/title.png");
+        background = new Texture("bg.png");
+        playButton = new Texture("playbtn.png");
+        title = new Texture("title.png");
         playBounds = new Rectangle(
                 (BCGame.WIDTH / 2) - (playButton.getWidth() / 2),
                 BCGame.HEIGHT / 2 - playButton.getHeight(),
