@@ -19,6 +19,7 @@ public class MenuState extends State {
     private Texture title;
 
     private Rectangle playBounds;
+    private boolean buttonHover;
 
     public MenuState(GameStateManager gsm) {
         super(gsm);
@@ -37,12 +38,11 @@ public class MenuState extends State {
 
     @Override
     protected void handleInput() {
-        if (Gdx.input.justTouched()) {
-            mouse.x = Gdx.input.getX();
-            mouse.y = Gdx.input.getY();
-            if (playBounds.contains(mouse.x, mouse.y))
-                gsm.set(new PlayState(gsm));
-        }
+        mouse.x = Gdx.input.getX();
+        mouse.y = Gdx.input.getY();
+        buttonHover = playBounds.contains(mouse.x, mouse.y);
+        if (buttonHover && Gdx.input.justTouched())
+            gsm.set(new PlayState(gsm));
     }
 
     @Override
@@ -59,6 +59,14 @@ public class MenuState extends State {
         sb.draw(background, 0, 0, BCGame.WIDTH, BCGame.HEIGHT);
         sb.draw(title, (BCGame.WIDTH / 2) - (title.getWidth() / 2), BCGame.HEIGHT - title.getHeight() - 100);
         sb.draw(playButton, (BCGame.WIDTH / 2) - (playButton.getWidth() / 2), BCGame.HEIGHT / 2);
+        if (buttonHover)
+            sb.draw(cow.getTexture(),
+                    10, -70,
+                    0, 0,
+                    cow.getTexture().getRegionWidth(), cow.getTexture().getRegionHeight(),
+                    6f, 6f,
+                    25f
+            );
         sb.draw(cow.getTexture(), (BCGame.WIDTH / 2) - (cow.getTexture().getRegionWidth() / 2), BCGame.HEIGHT / 2 + playButton.getHeight());
         sb.end();
     }
