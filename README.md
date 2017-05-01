@@ -8,4 +8,4 @@ M to return to Menu Screen
 
 Built using libgdx by BadLogicGames
 
-<applet code="com/zou50/bouncycow/desktop/DesktopLauncher.class" archive="desktop-1.0.jar" width=480 height=800></applet>
+<applet code="bouncy-cow/desktop/src/com/zou50/bouncycow/desktop/DesktopLauncher.java" archive="desktop-1.0.jar" width=480 height=800></applet>
